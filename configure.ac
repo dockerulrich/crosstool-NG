@@ -11,6 +11,13 @@ AC_CONFIG_AUX_DIR([scripts])
 #--------------------------------------------------------------------
 # A few helper macros
 
+# Force C++11 standard
+if test "x$CPPFLAGS" = "x"; then
+    CPPFLAGS="-std=c++11"
+else
+    CPPFLAGS="$CPPFLAGS -std=c++11"
+fi
+
 # Check for required tool
 AC_DEFUN(
     [ACX_CHECK_TOOL_REQ],

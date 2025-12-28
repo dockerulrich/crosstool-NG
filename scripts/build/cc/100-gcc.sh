@@ -435,7 +435,7 @@ do_gcc_core_backend() {
     CT_DoExecLog CFG                                   \
     CC_FOR_BUILD="${CT_BUILD}-gcc"                     \
     CFLAGS="${cflags}"                                 \
-    CXXFLAGS="${cflags}"                               \
+    CXXFLAGS="${cflags} -std=c++11"                    \
     LDFLAGS="${core_LDFLAGS[*]}"                       \
     CFLAGS_FOR_TARGET="${CT_TARGET_CFLAGS}"            \
     CXXFLAGS_FOR_TARGET="${CT_TARGET_CFLAGS}"          \
